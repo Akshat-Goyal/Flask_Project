@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block content %}
+
+	<div class="content" id="experiment-article-section-4-content">
+		
+		<form action="#" method="POST" id="exp-form">
+			
+			<select id="lang">
+				<option value="default" selected>--Select Language--</option>
+				<option>English</option>
+				<option>Hindi</option>	
+			</select>
+
+			<select id="sent"></select>
+
+		</form>
+
+		<p id="exp-table-heading"></p>
+		<div id="exp-table-div">
+
+			<table id="exp-table" border="1">
+
+
+				<thead>
+					<tr>
+						<th class="col1">LEXICON</th>
+						<th class="col2">POS</th>
+						<th class="col3"></th>
+						<th class="col4"></th>
+					</tr>
+				</thead>
+
+				<tbody id="exp-tbody"></tbody>
+
+			</table>
+
+			<br/>
+			<button id="exp-submit">Submit</button>
+			<button id="exp-get_ans">Get Answer</button>
+
+		</div>
+
+	</div>
+
+{% endblock content %}

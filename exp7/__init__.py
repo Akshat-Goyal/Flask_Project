@@ -29,6 +29,7 @@ def procedure():
 def experiment():
 	return render_template('experiment.html')
 
+# called by js using ajax to get required data from database
 @app.route('/form-exp1',methods=['POST'])
 def form_exp1():
 	val = request.form['option']

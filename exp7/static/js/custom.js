@@ -39,10 +39,14 @@ $('.navbar-collapse ul li a').click(function() {
 $('#lang').val("default");
 
 
+// contain sentence
 var que = new Array();
+// contain answers
 var ans = new Array();
+// contain option for dropdown in pos column
 var option = new Array();
 
+// forms select menu contining many sentences
 function select2(){
 	var i = 0;
 	$('#sent').empty().append("<option value=\""+"-1"+"\" selected>---Select Sentence---</option>");
@@ -53,6 +57,8 @@ function select2(){
 	$('#sent').css({"display" : "block", "margin" : "10px auto","margin-bottom":"30px"}).show();
 }
 
+
+// on selecting language, fetches data from database and call select2()
 $('#lang').change(function(){
 	var val = $('#lang').find(":selected").text();
 	if(val == "English") val = 1;
@@ -92,6 +98,7 @@ $('#lang').change(function(){
 
 });
 
+// form form select menu in pos column
 function select4(i){
 	var x = "<select id=\"pos"+i+"\" class=\"pos\">";
 	option.forEach(function(item){
@@ -101,6 +108,8 @@ function select4(i){
 	return x;
 }
 
+
+// form table according to selected sentence and call select4() to form select menu in pos column
 function select3(val){
 	var ar = new Array();
 	ar = ans[val].split(" ");
@@ -113,10 +122,13 @@ function select3(val){
 	count = i;
 	$('#exp-table').show();
 	$('#exp-submit').show();
+	$('#exp-get_ans').hide();
+
 }
 
 var value = 0;
 
+// call select3() to form table according to selected sentence
 $('#sent').change(function(){
 	var val = $('#sent').find(":selected").val();
 	value = val;
@@ -132,6 +144,7 @@ $('#sent').change(function(){
 	select3(parseInt(val));
 });
 
+// on clicking submit button, tells whether answer is right
 $('#exp-submit').click(function(){
 	var ar = new Array();
 	ar = ans[value].split(" ");
@@ -146,6 +159,8 @@ $('#exp-submit').click(function(){
 	$("#exp-get_ans").show();
 });
 
+
+// on clicking "get_answer", gives correct answer
 $('#exp-get_ans').click(function(){
 	var ar = new Array();
 	ar = ans[value].split(" ");

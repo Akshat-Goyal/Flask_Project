@@ -1362,6 +1362,8 @@ font-size: 30px;
 	}
 }
 
+									/*styling experiment dropdown*/
+
 #lang{
 	display: block;
 	margin: 50px auto;
@@ -1372,6 +1374,7 @@ font-size: 30px;
 	display: none;
 }
 
+									/*styling experiment table*/
 #exp-table-heading{
 	color:#0000FF;
 	text-align: center;
@@ -1425,12 +1428,15 @@ font-size: 30px;
 	width: 350px;
 	margin: 0 auto;
 }
+									/*styling experiment ends here*/
+									/*styling footer*/
 
 #footer{
 	position: relative;
 	bottom: 0px;
 }
-
+			
+									/*changing font-size of table of theory*/
 #experiment-article-section-2-content-table table{
 	font-size: 16px;
 }

@@ -1,6 +1,5 @@
 from exp7 import db
 
-
 # Stores POS options for different languages.
 class Lang_opt(db.Model):
 	id = db.Column(db.Integer, primary_key = True)

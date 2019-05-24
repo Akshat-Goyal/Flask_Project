@@ -84,6 +84,15 @@ $('#lang').change(function(){
 			que = data.que;
 			ans = data.ans;
 			option = (data.option).split(",");
+			if(val==1){
+				var i=0;
+				option.forEach(function(item){
+					if(item == 'Postposition'){
+						option[i]='Preposition';
+					}
+					i++;
+				});
+			}
 		   	select2();
 		});
 		event.preventDefault();
@@ -149,7 +158,7 @@ $('#exp-submit').click(function(){
 	var ar = new Array();
 	ar = ans[value].split(" ");
 	for(var i=0;i<ar.length;i++){
-		if($("#pos"+i).find(":selected").text() == ar[i].split("/")[1]){
+		if($("#pos"+i).find(":selected").text() == ar[i].split("/")[1] ){
 			$("#pic"+i).empty().append("<img src=\"static/images/right.png\" height=\"35px\" width=\"65px\">");
 		}
 		else{

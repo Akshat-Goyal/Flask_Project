@@ -1,3 +1,6 @@
+# About this app
+
+	It is a website on the course "Coarse Grained POS-Tagging (Computational Linguistics)". Python flask framework is used to make this website with some backened work using sqlite and ajax.
 
 # Run Application
 ```

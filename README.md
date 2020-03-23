@@ -8,8 +8,10 @@
 	$ pip3 install flask
 	$ pip3 install flask_sqlalchemy
 	$ pip3 install pytest
+	$ pip3 install requests
 2. Now run run.py file on your Command Terminal 
 	$ python3 run.py
+	$ python3 -m pytest
 3. Right Click on link shown on terminal and open it in browser.
 ```
 # Folder Structure

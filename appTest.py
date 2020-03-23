@@ -2,7 +2,7 @@ from flask import request, jsonify
 import requests
 import pytest
 
-c=0;
+c=0
 
 def test_form_exp1(var1,var2):
 
@@ -20,8 +20,8 @@ def test_form_exp1(var1,var2):
 		c=c+1
 
 
-test_form_exp1("1","data fetched successfully!")
-test_form_exp1("2","data fetched successfully!")
-test_form_exp1("0","Unable to fetch data!")
+# test_form_exp1("1","data fetched successfully!")
+# test_form_exp1("2","data fetched successfully!")
+# test_form_exp1("0","Unable to fetch data!")
 
 print("Tests Failed = "+str(c))
